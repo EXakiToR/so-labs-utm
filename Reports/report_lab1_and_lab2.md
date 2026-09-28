@@ -425,5 +425,28 @@ Memory — free -h
 Devices and storage — lsblk
 
 LAB 2
+Part 1. Build it and boot it (done)
 
+Part 2. Use xv6 as the Unix it is
+
+Observe: 
+
+Three xv6 programs: ls, cat, echo.
+
+Two OS features needed for a pipe: processes and inter-process communication (IPC).
+
+Shell comparison: The xv6 shell is a small Unix-like shell with basic features similar to the Linux shell, such as commands and pipes.
+
+Part 3 — Observe
+System calls used by user/cat.c:
+
+read() — asks the kernel to read data.
+
+write() — asks the kernel to write data.
+
+exit() — asks the kernel to terminate the process.
+
+sys_read implementation: It is in kernel/sysfile.c, at the line containing uint64 sys_read(void) (the exact line number can vary between xv6 versions).
+
+Difference between kernel/ and user/: kernel/ contains privileged OS code that manages hardware and system resources, while user/ contains ordinary programs that run on top of the OS.
 
